@@ -57,8 +57,11 @@ void QuickSort::QuickSortAlgorithm(vector<int>& Vector, int LeftIndex, int Right
 	// Sorting Right Part
 	QuickSortAlgorithm(Vector, PartitionIndex + 1, RightIndex);
 
-	for (int i = 0; i < Vector.size(); i++)
-	{
-		cout << "Vector[" << i << "] = " << Vector[i] << endl;
-	}
+	//if (AlgorithmMainPtr->bLogAlgorithmOutput)
+	//{
+	//	for (int i = 0; i < Vector.size(); i++)
+	//	{
+	//		cout << "Vector[" << i << "] = " << Vector[i] << endl;
+	//	}
+	//}
 }

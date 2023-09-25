@@ -1,2 +1,8 @@
-﻿  QuickSort.cpp
-  SortingAlgorithm.vcxproj -> C:\AlgoritmeDataStruktur\SortingAlgorithm\x64\Debug\Oblig2_SortingAlgorithm.exe
+﻿  SelectionSort.cpp
+  SortingAlgorithmMain.cpp
+C:\AlgoritmeDataStruktur\Complulsory_2\SortingAlgorithm\SortingAlgorithmMain.cpp(52,71): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\AlgoritmeDataStruktur\Complulsory_2\SortingAlgorithm\SortingAlgorithmMain.cpp(57,69): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\AlgoritmeDataStruktur\Complulsory_2\SortingAlgorithm\SortingAlgorithmMain.cpp(58,18): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\AlgoritmeDataStruktur\Complulsory_2\SortingAlgorithm\SortingAlgorithmMain.cpp(63,69): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+  SortingAlgorithm.vcxproj -> C:\AlgoritmeDataStruktur\Complulsory_2\x64\Debug\Oblig2_SortingAlgorithm.exe

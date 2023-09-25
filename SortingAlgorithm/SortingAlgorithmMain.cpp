@@ -6,19 +6,26 @@
 
 int main()
 {
-	const shared_ptr<SelectionSort> SelectionSortPtr = make_shared<SelectionSort>();
-	const shared_ptr<MergeSort> MergeSortPtr = make_shared<MergeSort>();
-	const shared_ptr<QuickSort> QuickSortPtr = make_shared<QuickSort>();
-	const shared_ptr<SortingAlgorithmMain> AlgorithmMainPtr = make_shared<SortingAlgorithmMain>();
+	//Smart pointers to the Main Class
+	shared_ptr<SortingAlgorithmMain> AlgorithmMainPtr = make_shared<SortingAlgorithmMain>();
 
-	// Timing the different sequences
-	//TODO: 1. Adding a case for 10, 100, 1000 and 10000 int elements
+	cout << "Do you wish to enable logging outputs in the console? (1 for Yes, 2 for No)\n ";
+	while (!(cin >> AlgorithmMainPtr->LoggingChoice) || (AlgorithmMainPtr->LoggingChoice < 1 || AlgorithmMainPtr->LoggingChoice > 2))
+	{
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cout << "Invalid input. Try again. " << endl;
+	}
+
 	AlgorithmMainPtr->GenerateElements(150, 20, AlgorithmMainPtr->MainVector);
 	AlgorithmMainPtr->SortingChoices(AlgorithmMainPtr->AlgorithmChoice);
+
+	
 }
 
 void SortingAlgorithmMain::SortingChoices(int SortingChoice)
 {
+	//Smart pointers to the other algorithms classes
 	const shared_ptr<SelectionSort> SelectionSortPtr = make_shared<SelectionSort>();
 	const shared_ptr<MergeSort> MergeSortPtr = make_shared<MergeSort>();
 	const shared_ptr<QuickSort> QuickSortPtr = make_shared<QuickSort>();

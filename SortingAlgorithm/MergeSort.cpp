@@ -18,7 +18,7 @@ void MergeSort::MergeSortSorting(vector<int>& Vector, int LeftIndex, int MiddleI
 	}
 	for (int i = 0; i < RightSizeAvailable; i++)
 	{
-		RightVector[i] = Vector[MiddleIndex + 1	+ i];
+		RightVector[i] = Vector[MiddleIndex + 1 + i];
 	}
 
 	int i = 0;
@@ -67,8 +67,11 @@ void MergeSort::MergeSortAlgorithm(vector<int>& Vector, int LeftIndex, int Right
 		MergeSortSorting(Vector, LeftIndex, MiddleIndex, RightIndex);
 	}
 
-	for (int i = 0; i < Vector.size(); i++)
-	{
-		cout << "Vector[" << i << "] = " << Vector[i] << endl;
-	}
+	//if (AlgorithmMainPtr->bLogAlgorithmOutput)
+	//{
+	//	for (int i = 0; i < Vector.size(); i++)
+	//	{
+	//		cout << "Vector[" << i << "] = " << Vector[i] << endl;
+	//	}
+	//}
 }
