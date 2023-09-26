@@ -10,9 +10,9 @@ using namespace std;
 class MergeSort
 {
 public:
-	MergeSort();
+	MergeSort(shared_ptr<SortingAlgorithmMain> AlgorithmMainPointer);
 	void MergeSortSorting(vector<int>& Vector, int LeftIndex, int MiddleIndex, int RightIndex);
 	void MergeSortAlgorithm(vector<int>& Vector, int LeftIndex, int RightIndex);
 
-	shared_ptr<SortingAlgorithmMain> AlgorithmMainPtr = make_shared<SortingAlgorithmMain>();
+	shared_ptr<SortingAlgorithmMain> AlgorithmMainPtr;
 };

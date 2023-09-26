@@ -19,7 +19,7 @@ public:
 
 	vector<int> MainVector = {};
 
-	void SortingChoices(int SortingChoice);
+	void SortingChoices(int SortingChoice, shared_ptr<SortingAlgorithmMain> AlgorithmMainPointer);
 	void GenerateElements(int MaxIntSize, int VectorSize, vector<int> Vector);
 
 	int LoggingChoice;

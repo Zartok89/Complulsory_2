@@ -1,7 +1,9 @@
 #include "SelectionSort.h"
 
-SelectionSort::SelectionSort()
-= default;
+SelectionSort::SelectionSort(shared_ptr<SortingAlgorithmMain> AlgorithmMainPointer)
+{
+	AlgorithmMainPtr = AlgorithmMainPointer;
+}
 
 void SelectionSort::SelectionSortAlgorithm(vector<int>& Vector, int Length)
 {

@@ -10,8 +10,8 @@ using namespace std;
 class SelectionSort
 {
 public:
-	SelectionSort();
+	SelectionSort(shared_ptr<SortingAlgorithmMain> AlgorithmMainPointer);
 	void SelectionSortAlgorithm(vector<int> &Vector, int Length);
 
-	SortingAlgorithmMain &AlgorithmMainPtr = AlgorithmMainPtr.LoggingChoice;
+	shared_ptr<SortingAlgorithmMain> AlgorithmMainPtr;
 };

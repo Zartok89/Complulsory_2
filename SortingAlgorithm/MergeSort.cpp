@@ -1,9 +1,11 @@
 #include "MergeSort.h"
 
-MergeSort::MergeSort()
-= default;
+MergeSort::MergeSort(shared_ptr<SortingAlgorithmMain> AlgorithmMainPointer)
+{
+	AlgorithmMainPtr = AlgorithmMainPointer;
+}
 
-void MergeSort::MergeSortSorting(vector<int>& Vector, int LeftIndex, int MiddleIndex, int RightIndex)
+void MergeSort::MergeSortSorting(vector<int> &Vector, int LeftIndex, int MiddleIndex, int RightIndex)
 {
 	int LeftSizeAvailable = MiddleIndex - LeftIndex + 1;
 	int RightSizeAvailable = RightIndex - MiddleIndex;
@@ -67,11 +69,11 @@ void MergeSort::MergeSortAlgorithm(vector<int>& Vector, int LeftIndex, int Right
 		MergeSortSorting(Vector, LeftIndex, MiddleIndex, RightIndex);
 	}
 
-	//if (AlgorithmMainPtr->bLogAlgorithmOutput)
-	//{
-	//	for (int i = 0; i < Vector.size(); i++)
-	//	{
-	//		cout << "Vector[" << i << "] = " << Vector[i] << endl;
-	//	}
-	//}
+	if (AlgorithmMainPtr->LoggingChoice == 1)
+	{
+		for (int i = 0; i < Vector.size(); i++)
+		{
+			cout << "Vector[" << i << "] = " << Vector[i] << endl;
+		}
+	}
 }

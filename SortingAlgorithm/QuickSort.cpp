@@ -1,7 +1,9 @@
 #include "QuickSort.h"
 
-QuickSort::QuickSort()
-= default;
+QuickSort::QuickSort(shared_ptr<SortingAlgorithmMain> AlgorithmMainPointer)
+{
+	AlgorithmMainPtr = AlgorithmMainPointer;
+}
 
 int QuickSort::Partition(vector<int>& Vector, int LeftValue, int RightValue)
 {
@@ -57,11 +59,11 @@ void QuickSort::QuickSortAlgorithm(vector<int>& Vector, int LeftIndex, int Right
 	// Sorting Right Part
 	QuickSortAlgorithm(Vector, PartitionIndex + 1, RightIndex);
 
-	//if (AlgorithmMainPtr->bLogAlgorithmOutput)
-	//{
-	//	for (int i = 0; i < Vector.size(); i++)
-	//	{
-	//		cout << "Vector[" << i << "] = " << Vector[i] << endl;
-	//	}
-	//}
+	if (AlgorithmMainPtr->LoggingChoice == 1)
+	{
+		for (int i = 0; i < Vector.size(); i++)
+		{
+			cout << "Vector[" << i << "] = " << Vector[i] << endl;
+		}
+	}
 }

@@ -11,10 +11,10 @@ using namespace std;
 class QuickSort
 {
 public:
-	QuickSort();
+	QuickSort(shared_ptr<SortingAlgorithmMain> AlgorithmMainPointer);
 	void QuickSortAlgorithm(vector<int> &Vector, int LeftIndex, int RightIndex);
 	int Partition(vector<int> &Vector, int LeftValue, int RightValue);
 
-	shared_ptr<SortingAlgorithmMain> AlgorithmMainPtr = make_shared<SortingAlgorithmMain>();
+	shared_ptr<SortingAlgorithmMain> AlgorithmMainPtr;
 };
 

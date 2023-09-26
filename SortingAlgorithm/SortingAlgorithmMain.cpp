@@ -18,17 +18,15 @@ int main()
 	}
 
 	AlgorithmMainPtr->GenerateElements(150, 20, AlgorithmMainPtr->MainVector);
-	AlgorithmMainPtr->SortingChoices(AlgorithmMainPtr->AlgorithmChoice);
-
-	
+	AlgorithmMainPtr->SortingChoices(AlgorithmMainPtr->AlgorithmChoice, AlgorithmMainPtr);
 }
 
-void SortingAlgorithmMain::SortingChoices(int SortingChoice)
+void SortingAlgorithmMain::SortingChoices(int SortingChoice, shared_ptr<SortingAlgorithmMain> AlgorithmMainPointer)
 {
 	//Smart pointers to the other algorithms classes
-	const shared_ptr<SelectionSort> SelectionSortPtr = make_shared<SelectionSort>();
-	const shared_ptr<MergeSort> MergeSortPtr = make_shared<MergeSort>();
-	const shared_ptr<QuickSort> QuickSortPtr = make_shared<QuickSort>();
+	const shared_ptr<SelectionSort> SelectionSortPtr = make_shared<SelectionSort>(AlgorithmMainPointer);
+	const shared_ptr<MergeSort> MergeSortPtr = make_shared<MergeSort>(AlgorithmMainPointer);
+	const shared_ptr<QuickSort> QuickSortPtr = make_shared<QuickSort>(AlgorithmMainPointer);
 
 	cout << "--Choose your Sorting Algorithm--\n";
 	cout << "1. Selection Sort Algorithm\n";
